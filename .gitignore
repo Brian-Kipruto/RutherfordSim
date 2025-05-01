@@ -1,0 +1,39 @@
+# CMake build directory and files
+build/
+Build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+
+# Compiled files and libraries (common)
+*.exe
+*.dll
+*.lib
+*.so
+*.a
+*.o
+*.obj
+
+# VS Code specific
+.vscode/
+
+# Visual Studio specific cache/user files
+*.VC.db*
+*.suo
+*.user
+*.vcxproj.user
+*.[Cc]ache
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+ipch/
+.vs/
+
+# Other common ignores
+*.log
+*~
+.DS_Store

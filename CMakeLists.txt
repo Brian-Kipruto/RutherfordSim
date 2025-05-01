@@ -11,4 +11,21 @@ find_package(Geant4 REQUIRED)
 
 #Adding Geant 4 definitions and including the edirectories
 include (${Geant4_USE_File})
-include_directories()
+include_directories(${Geant4_INCLUDE_DIRS})
+
+#Adding the executable targets
+add_executable(rutherford 
+rutherford.cc
+DetectorConstruction.cc 
+PhysicsList.cc
+ActionInitiallization.cc
+PrimaryGeneratorAction.cc
+)
+
+#linking the  created executables against geant4 libraries
+
+target_link_libraries(rutherford ${Geant4_LIBRARIES})
+
+message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
+message(STATUS "install prefix: ${CMAKE_INSTALL_PREFIX}")
+message(STATUS "Geant4 Libraries: ${Geant4_Libraries}")

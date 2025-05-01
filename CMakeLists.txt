@@ -10,7 +10,7 @@ project(RutherfordSim)
 find_package(Geant4 REQUIRED)
 
 #Adding Geant 4 definitions and including the edirectories
-include (${Geant4_USE_File})
+include(${Geant4_USE_FILE})
 include_directories(${Geant4_INCLUDE_DIRS})
 
 #Adding the executable targets
@@ -18,7 +18,7 @@ add_executable(rutherford
 rutherford.cc
 DetectorConstruction.cc 
 PhysicsList.cc
-ActionInitiallization.cc
+ActionInitialization.cc
 PrimaryGeneratorAction.cc
 )
 
